@@ -1,6 +1,17 @@
 <link rel="stylesheet" href="<?php echo base_url();?>js/jquery-ui/css/smoothness/jquery-ui-1.9.2.custom.css" />
 <script type="text/javascript" src="<?php echo base_url()?>js/jquery-ui/js/jquery-ui-1.9.2.custom.js"></script>
 <script type="text/javascript" src="<?php echo base_url()?>js/jquery.validate.js"></script>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("#hide").click(function(){
+    $("#element").hide();
+  });
+  $("#show").click(function(){
+    $("#element").show();
+  });
+});
+</script>
 <div class="row-fluid" style="margin-top:0">
     <div class="span12">
         <div class="widget-box">
@@ -11,7 +22,7 @@
                 <h5>Registro de venta</h5>
             </div>
             <div class="widget-content nopadding">
-                
+
 
                 <div class="span12" id="divProdutosServicos" style=" margin-left: 0">
                     <ul class="nav nav-tabs">
@@ -30,21 +41,22 @@
 
                                         <div class="span2">
                                             <label for="dataInicial">Fecha de Venta<span class="required">*</span></label>
-                                            <input id="dataVenda" class="span12 datepicker" type="text" name="dataVenda" value=""  />
+                                            <input id="dataVenda" class="span12 datepicker" type="text" name="dataVenda" value="<?php echo date("Y/m/d"); ?>"  />
                                         </div>
+
                                         <div class="span5">
-                                            <label for="cliente">Cliente<span class="required">*</span></label>
+                                            <label for="cliente">Producto<span class="required">*</span></label>
                                             <input id="cliente" class="span12" type="text" name="cliente" value=""  />
                                             <input id="clientes_id" class="span12" type="hidden" name="clientes_id" value=""  />
                                         </div>
                                         <div class="span5">
                                             <label for="tecnico">Vendedor<span class="required">*</span></label>
-                                            <input id="tecnico" class="span12" type="text" name="tecnico" value=""  />
+                                            <input id="tecnico" class="span12" type="text" name="tecnico" value="Mesero"  />
                                             <input id="usuarios_id" class="span12" type="hidden" name="usuarios_id" value=""  />
                                         </div>
-                                        
+
                                     </div>
-                              
+
                                     <div class="span12" style="padding: 1%; margin-left: 0">
                                         <div class="span6 offset3" style="text-align: center">
                                             <button class="btn btn-success" id="btnContinuar"><i class="icon-share-alt icon-white"></i> Continuar</button>
@@ -60,11 +72,11 @@
 
                 </div>
 
-                
+
 .
-             
+
         </div>
-        
+
     </div>
 </div>
 </div>
@@ -80,7 +92,7 @@ $(document).ready(function(){
             select: function( event, ui ) {
 
                  $("#clientes_id").val(ui.item.id);
-                
+
 
             }
       });
@@ -96,8 +108,8 @@ $(document).ready(function(){
             }
       });
 
-      
-      
+
+
 
       $("#formVendas").validate({
           rules:{
@@ -123,8 +135,7 @@ $(document).ready(function(){
        });
 
     $(".datepicker" ).datepicker({ dateFormat: 'dd/mm/yy' });
-   
+
 });
 
 </script>
-

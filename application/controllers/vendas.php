@@ -76,7 +76,8 @@ class Vendas extends CI_Controller {
 
           /*  $dataVenda = $this->input->post('dataVenda');*/
             $dataVenda = date('Y/m/d');
-            
+
+            print($this->input->post('clientes_id'));
 
             $data = array(
                 'dataVenda' => $dataVenda,
@@ -202,7 +203,7 @@ class Vendas extends CI_Controller {
 
         if (isset($_GET['term'])){
             $q = strtolower($_GET['term']);
-            $this->vendas_model->autoCompleteCliente($q);
+            $this->vendas_model->autoCompleteCliente('Generico');
         }
 
     }

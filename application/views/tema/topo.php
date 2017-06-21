@@ -64,11 +64,13 @@
     <?php } ?>
 -->
     <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'vOs')){ ?>
-        <li class="<?php if(isset($menuOs)){echo 'active';};?>"><a href="<?php echo base_url()?>index.php/os"><i class="icon icon-tags"></i> <span>Administrar Ordenes</span></a></li>
+        <!--<li class="<?php if(isset($menuOs)){echo 'active';};?>"><a href="<?php echo base_url()?>index.php/os"><i class="icon icon-tags"></i> <span>Administrar Ordenes</span></a></li>-->
+        <li class="<?php if(isset($menuOs)){echo 'active';};?>"><a href=""><i class="icon icon-tags"></i> <span>Administrar Ordenes</span></a></li>
     <?php } ?>
 
     <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'vVenda')){ ?>
-        <li class="<?php if(isset($menuVendas)){echo 'active';};?>"><a href="<?php echo base_url()?>index.php/vendas"><i class="icon icon-shopping-cart"></i> <span>Ventas</span></a></li>
+        <!-- <li class="<?php if(isset($menuVendas)){echo 'active';};?>"><a href="<?php echo base_url()?>index.php/vendas"><i class="icon icon-shopping-cart"></i> <span>Ventas</span></a></li>-->
+        <li class="<?php if(isset($menuVendas)){echo 'active';};?>"><a href=""><i class="icon icon-shopping-cart"></i> <span>Ventas</span></a></li>
     <?php } ?>
     <!--
     <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'vArquivo')){ ?>
@@ -103,7 +105,8 @@
             <?php } ?>
           -->
             <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'rOs')){ ?>
-                 <li><a href="<?php echo base_url()?>index.php/relatorios/os">Ordenes de Servicio</a></li>
+              <!-- <li><a href="<?php echo base_url()?>index.php/relatorios/os">Ordenes de Servicio</a></li>-->
+                 <li><a href="">Ordenes de Servicio</a></li>
             <?php } ?>
             <!--
             <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'rVenda')){ ?>

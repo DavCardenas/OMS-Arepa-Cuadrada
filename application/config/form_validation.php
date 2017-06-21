@@ -207,11 +207,11 @@ $config = array('clientes' => array(array(
                                     'label' => 'Data da Venda',
                                     'rules' => 'required|trim|xss_clean'
                                 ),
-                                array(
+                              /*  array(
                                     'field'=>'clientes_id',
                                     'label'=>'clientes',
                                     'rules'=>'trim|xss_clean|required'
-                                ),
+                                ),*/
                                 array(
                                     'field'=>'usuarios_id',
                                     'label'=>'usuarios_id',
