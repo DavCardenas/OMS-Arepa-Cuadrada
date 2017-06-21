@@ -52,11 +52,11 @@
     <li class="<?php if(isset($menuPainel)){echo 'active';};?>"><a href="<?php echo base_url()?>"><i class="icon icon-home"></i> <span>Inicio</span></a></li>
 
     <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'vCliente')){ ?>
-        <li class="<?php if(isset($menuClientes)){echo 'active';};?>"><a href="<?php echo base_url()?>index.php/clientes"><i class="icon icon-group"></i> <span>Productos</span></a></li>
+        <li class="<?php if(isset($menuClientes)){echo 'active';};?>"><a href="<?php echo base_url()?>index.php/clientes"><i class="icon icon-barcode"></i> <span>Productos</span></a></li>
     <?php } ?>
 
     <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'vProduto')){ ?>
-        <li class="<?php if(isset($menuProdutos)){echo 'active';};?>"><a href="<?php echo base_url()?>index.php/produtos"><i class="icon icon-barcode"></i> <span>Ingredientes</span></a></li>
+        <li class="<?php if(isset($menuProdutos)){echo 'active';};?>"><a href="<?php echo base_url()?>index.php/produtos"><i class="icon icon-group"></i> <span>Ingredientes</span></a></li>
     <?php } ?>
     <!--
     <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'vServico')){ ?>
