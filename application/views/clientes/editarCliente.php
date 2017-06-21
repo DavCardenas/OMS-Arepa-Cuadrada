@@ -70,7 +70,7 @@
                     </div>
                     -->
                     <div class="control-group" class="control-label">
-                        <label for="cidade" class="control-label">Ciudad<span class="required">*</span></label>
+                        <label for="cidade" class="control-label">Precio de Venta<span class="required">*</span></label>
                         <div class="controls">
                             <input id="cidade" type="text" name="cidade" value="<?php echo $result->cidade; ?>"  />
                         </div>
@@ -82,7 +82,7 @@
                             <input id="estado" type="text" name="estado" value="<?php echo $result->estado; ?>"  />
                         </div>
                     </div>
-                    
+
                     <div class="control-group" class="control-label">
                         <label for="cep" class="control-label">CP<span class="required">*</span></label>
                         <div class="controls">
@@ -150,4 +150,3 @@
            });
       });
 </script>
-

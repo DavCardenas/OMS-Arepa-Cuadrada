@@ -5,7 +5,7 @@
                 <span class="icon">
                     <i class="icon-align-justify"></i>
                 </span>
-                <h5>Editar Producto</h5>
+                <h5>Editar Ingrediente</h5>
             </div>
             <div class="widget-content nopadding">
                 <?php echo $custom_error; ?>
@@ -17,28 +17,28 @@
                             <input id="descricao" type="text" name="descricao" value="<?php echo $result->descricao; ?>"  />
                         </div>
                     </div>
-                    <!--
+
                     <div class="control-group">
-                        <label for="unidade" class="control-label">Unidad<span class="required">*</span></label>
+                        <label for="unidade" class="control-label">Simbolo<span class="required">*</span></label>
                         <div class="controls">
                             <input id="unidade" type="text" name="unidade" value="<?php echo $result->unidade; ?>"  />
                         </div>
                     </div>
-
+<!--
                     <div class="control-group">
                         <label for="precoCompra" class="control-label">Precio de Compra<span class="required">*</span></label>
                         <div class="controls">
                             <input id="precoCompra" class="money" type="text" name="precoCompra" value="<?php echo $result->precoCompra; ?>"  />
                         </div>
                     </div>
-                    -->
+
                     <div class="control-group">
                         <label for="precoVenda" class="control-label">Precio de Venta<span class="required">*</span></label>
                         <div class="controls">
                             <input id="precoVenda" class="money" type="text" name="precoVenda" value="<?php echo $result->precoVenda; ?>"  />
                         </div>
                     </div>
-                    <!--
+
                     <div class="control-group">
                         <label for="estoque" class="control-label">Stock<span class="required">*</span></label>
                         <div class="controls">
@@ -52,7 +52,7 @@
                             <input id="estoqueMinimo" type="text" name="estoqueMinimo" value="<?php echo $result->estoqueMinimo; ?>"  />
                         </div>
                     </div>
-                    -->
+-->
                     <div class="form-actions">
                         <div class="span12">
                             <div class="span6 offset3">
@@ -80,17 +80,17 @@
         $('#formProduto').validate({
             rules :{
                   descricao: { required: true},
-                  unidade: { required: true},
-                  precoCompra: { required: true},
+                  unidade: { required: true}
+                  /*precoCompra: { required: true},
                   precoVenda: { required: true},
-                  estoque: { required: true}
+                  estoque: { required: true}*/
             },
             messages:{
                   descricao: { required: 'Campo Requerido.'},
-                  unidade: {required: 'Campo Requerido.'},
-                  precoCompra: { required: 'Campo Requerido.'},
+                  unidade: {required: 'Campo Requerido.'}
+                  /*precoCompra: { required: 'Campo Requerido.'},
                   precoVenda: { required: 'Campo Requerido.'},
-                  estoque: { required: 'Campo Requerido.'}
+                  estoque: { required: 'Campo Requerido.'}*/
             },
 
             errorClass: "help-inline",
@@ -105,7 +105,3 @@
            });
     });
 </script>
-
-
-
-

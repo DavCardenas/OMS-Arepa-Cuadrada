@@ -5,7 +5,7 @@
                 <span class="icon">
                     <i class="icon-user"></i>
                 </span>
-                <h5>Editar Usuario</h5>
+                <h5>Editar Empleados</h5>
             </div>
             <div class="widget-content nopadding">
                 <?php if ($custom_error != '') {
@@ -21,23 +21,23 @@
                     </div>
 
                     <div class="control-group">
-                        <label for="rg" class="control-label">DNI<span class="required">*</span></label>
+                        <label for="rua" class="control-label">Apellidos<span class="required">*</span></label>
+                        <div class="controls">
+                            <input id="rua" type="text" name="rua" value="<?php echo $result->rua; ?>"  />
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="rg" class="control-label">Número de Identificación<span class="required">*</span></label>
                         <div class="controls">
                             <input id="rg" type="text" name="rg" value="<?php echo $result->rg; ?>"  />
                         </div>
                     </div>
-
+<!--
                     <div class="control-group">
                         <label for="cpf" class="control-label">NIF<span class="required">*</span></label>
                         <div class="controls">
                             <input id="cpf" type="text" name="cpf" value="<?php echo $result->cpf; ?>"  />
-                        </div>
-                    </div>
-
-                    <div class="control-group">
-                        <label for="rua" class="control-label">Dirección<span class="required">*</span></label>
-                        <div class="controls">
-                            <input id="rua" type="text" name="rua" value="<?php echo $result->rua; ?>"  />
                         </div>
                     </div>
 
@@ -77,6 +77,13 @@
                     </div>
 
                     <div class="control-group">
+                        <label for="telefone" class="control-label">Teléfono<span class="required">*</span></label>
+                        <div class="controls">
+                            <input id="telefone" type="text" name="telefone" value="<?php echo $result->telefone; ?>"  />
+                        </div>
+                    </div>
+-->
+                    <div class="control-group">
                         <label for="senha" class="control-label">Contraseña</label>
                         <div class="controls">
                             <input id="senha" type="password" name="senha" value=""  placeholder="No complete si no desea cambiar."  />
@@ -84,15 +91,10 @@
                         </div>
                     </div>
 
-                    <div class="control-group">
-                        <label for="telefone" class="control-label">Teléfono<span class="required">*</span></label>
-                        <div class="controls">
-                            <input id="telefone" type="text" name="telefone" value="<?php echo $result->telefone; ?>"  />
-                        </div>
-                    </div>
+
 
                     <div class="control-group">
-                        <label for="celular" class="control-label">Tel. Móvil</label>
+                        <label for="celular" class="control-label">Número de Teléfono</label>
                         <div class="controls">
                             <input id="celular" type="text" name="celular" value="<?php echo $result->celular; ?>"  />
                         </div>
@@ -130,8 +132,6 @@
                             </div>
                         </div>
                     </div>
-
-
                 </form>
             </div>
         </div>
@@ -149,29 +149,34 @@
             rules : {
                   nome:{ required: true},
                   rg:{ required: true},
+                  celular:{ required: true},
+                  rua:{ required: true}
+/**
                   cpf:{ required: true},
                   telefone:{ required: true},
                   email:{ required: true},
-                  rua:{ required: true},
                   numero:{ required: true},
                   bairro:{ required: true},
                   cidade:{ required: true},
                   estado:{ required: true},
-                  cep:{ required: true}
+                  cep:{ required: true},
+*/
             },
             messages: {
                   nome :{ required: 'Campo Requerido.'},
                   rg:{ required: 'Campo Requerido.'},
+                  celular:{ required: 'Campo Requerido.'},
+                  rua:{ required: 'Campo Requerido.'}
+/**
                   cpf:{ required: 'Campo Requerido.'},
                   telefone:{ required: 'Campo Requerido.'},
                   email:{ required: 'Campo Requerido.'},
-                  rua:{ required: 'Campo Requerido.'},
                   numero:{ required: 'Campo Requerido.'},
                   bairro:{ required: 'Campo Requerido.'},
                   cidade:{ required: 'Campo Requerido.'},
                   estado:{ required: 'Campo Requerido.'},
                   cep:{ required: 'Campo Requerido.'}
-
+*/
             },
 
             errorClass: "help-inline",
@@ -187,5 +192,3 @@
 
       });
 </script>
-
-

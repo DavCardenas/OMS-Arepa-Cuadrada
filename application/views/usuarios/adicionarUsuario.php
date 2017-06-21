@@ -5,7 +5,7 @@
                 <span class="icon">
                     <i class="icon-user"></i>
                 </span>
-                <h5>Registro de Usuario</h5>
+                <h5>Registro de Empleado</h5>
             </div>
             <div class="widget-content nopadding">
                 <?php if ($custom_error != '') {
@@ -13,65 +13,30 @@
                 } ?>
                 <form action="<?php echo current_url(); ?>" id="formUsuario" method="post" class="form-horizontal" >
                     <div class="control-group">
-                        <label for="nome" class="control-label">Nombre<span class="required">*</span></label>
+                        <label for="nome" class="control-label">Nombres<span class="required">*</span></label>
                         <div class="controls">
                             <input id="nome" type="text" name="nome" value="<?php echo set_value('nome'); ?>"  />
                         </div>
                     </div>
 
                     <div class="control-group">
-                        <label for="rg" class="control-label">DNI<span class="required">*</span></label>
-                        <div class="controls">
-                            <input id="rg" type="text" name="rg" value="<?php echo set_value('rg'); ?>"  />
-                        </div>
-                    </div>
-
-                    <div class="control-group">
-                        <label for="cpf" class="control-label">NIF<span class="required">*</span></label>
-                        <div class="controls">
-                            <input id="cpf" type="text" name="cpf" value="<?php echo set_value('cpf'); ?>"  />
-                        </div>
-                    </div>
-
-                    <div class="control-group">
-                        <label for="rua" class="control-label">Dirección<span class="required">*</span></label>
+                        <label for="rua" class="control-label">Apellidos<span class="required">*</span></label>
                         <div class="controls">
                             <input id="rua" type="text" name="rua" value="<?php echo set_value('rua'); ?>"  />
                         </div>
                     </div>
 
                     <div class="control-group">
-                        <label for="numero" class="control-label">Número<span class="required">*</span></label>
+                        <label for="rg" class="control-label">Número de Identificación<span class="required">*</span></label>
                         <div class="controls">
-                            <input id="numero" type="text" name="numero" value="<?php echo set_value('numero'); ?>"  />
+                            <input id="rg" type="text" name="rg" value="<?php echo set_value('rg'); ?>"  />
                         </div>
                     </div>
 
                     <div class="control-group">
-                        <label for="bairro" class="control-label">Barrio<span class="required">*</span></label>
+                        <label for="celular" class="control-label">Número de Teléfono<span class="required">*</span></label>
                         <div class="controls">
-                            <input id="bairro" type="text" name="bairro" value="<?php echo set_value('bairro'); ?>"  />
-                        </div>
-                    </div>
-
-                    <div class="control-group">
-                        <label for="cidade" class="control-label">Ciudad<span class="required">*</span></label>
-                        <div class="controls">
-                            <input id="cidade" type="text" name="cidade" value="<?php echo set_value('cidade'); ?>"  />
-                        </div>
-                    </div>
-
-                    <div class="control-group">
-                        <label for="estado" class="control-label">País<span class="required">*</span></label>
-                        <div class="controls">
-                            <input id="estado" type="text" name="estado" value="<?php echo set_value('estado'); ?>"  />
-                        </div>
-                    </div>
-
-                    <div class="control-group">
-                        <label for="email" class="control-label">Email<span class="required">*</span></label>
-                        <div class="controls">
-                            <input id="email" type="text" name="email" value="<?php echo set_value('email'); ?>"  />
+                            <input id="celular" type="text" name="celular" value="<?php echo set_value('celular'); ?>"  />
                         </div>
                     </div>
 
@@ -83,21 +48,7 @@
                     </div>
 
                     <div class="control-group">
-                        <label for="telefone" class="control-label">Teléfono<span class="required">*</span></label>
-                        <div class="controls">
-                            <input id="telefone" type="text" name="telefone" value="<?php echo set_value('telefone'); ?>"  />
-                        </div>
-                    </div>
-
-                    <div class="control-group">
-                        <label for="celular" class="control-label">Tel. Móvil</label>
-                        <div class="controls">
-                            <input id="celular" type="text" name="celular" value="<?php echo set_value('celular'); ?>"  />
-                        </div>
-                    </div>
-
-                    <div class="control-group">
-                        <label  class="control-label">Situación*</label>
+                        <label  class="control-label">Estado*</label>
                         <div class="controls">
                             <select name="situacao" id="situacao">
                                 <option value="1">Activo</option>
@@ -112,7 +63,7 @@
                             <select name="permissoes_id" id="permissoes_id">
                                   <?php foreach ($permissoes as $p) {
                                       echo '<option value="'.$p->idPermissao.'">'.$p->nome.'</option>';
-                                  } ?>
+                                  }?>
                             </select>
                         </div>
                     </div>
@@ -125,8 +76,6 @@
                             </div>
                         </div>
                     </div>
-
-
                 </form>
             </div>
         </div>
@@ -137,36 +86,20 @@
 <script  src="<?php echo base_url()?>js/jquery.validate.js"></script>
 <script type="text/javascript">
       $(document).ready(function(){
-
            $('#formUsuario').validate({
             rules : {
                   nome:{ required: true},
                   rg:{ required: true},
-                  cpf:{ required: true},
-                  telefone:{ required: true},
-                  email:{ required: true},
-                  senha:{ required: true},
+                  senha:{ re quired: true},
                   rua:{ required: true},
-                  numero:{ required: true},
-                  bairro:{ required: true},
-                  cidade:{ required: true},
-                  estado:{ required: true},
-                  cep:{ required: true}
+                  celular:{ required: true}
             },
             messages: {
                   nome :{ required: 'Campo Requerido.'},
                   rg:{ required: 'Campo Requerido.'},
-                  cpf:{ required: 'Campo Requerido.'},
-                  telefone:{ required: 'Campo Requerido.'},
-                  email:{ required: 'Campo Requerido.'},
                   senha:{ required: 'Campo Requerido.'},
                   rua:{ required: 'Campo Requerido.'},
-                  numero:{ required: 'Campo Requerido.'},
-                  bairro:{ required: 'Campo Requerido.'},
-                  cidade:{ required: 'Campo Requerido.'},
-                  estado:{ required: 'Campo Requerido.'},
-                  cep:{ required: 'Campo Requerido.'}
-
+                  celular:{ required: 'Campo Requerido.'}
             },
 
             errorClass: "help-inline",
@@ -182,7 +115,3 @@
 
       });
 </script>
-
-
-
-

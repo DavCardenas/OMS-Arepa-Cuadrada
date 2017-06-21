@@ -1,5 +1,5 @@
 <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'aCliente')){ ?>
-    <a href="<?php echo base_url();?>index.php/clientes/adicionar" class="btn btn-success"><i class="icon-plus icon-white"></i> Agregar Ingrediente</a>    
+    <a href="<?php echo base_url();?>index.php/clientes/adicionar" class="btn btn-success"><i class="icon-plus icon-white"></i> Agregar Productos</a>
 <?php } ?>
 
 <?php
@@ -10,7 +10,7 @@ if(!$results){?>
             <span class="icon">
                 <i class="icon-user"></i>
             </span>
-            <h5>Ingredientes</h5>
+            <h5>Productos</h5>
 
         </div>
 
@@ -20,14 +20,14 @@ if(!$results){?>
                     <tr>
                         <th>#</th>
                         <th>Nombre</th>
-                        <th>Simbolo</th>
+                        <th>Precio de Venta</th>
                         <!--<th>Teléfono</th>
                         <th>Acción</th>-->
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td colspan="5">Ningún Ingrediente Registrado</td>
+                        <td colspan="5">Ningún Producto Registrado</td>
                     </tr>
                 </tbody>
             </table>
@@ -35,7 +35,7 @@ if(!$results){?>
     </div>
 
 <?php }else{
-	
+
 
 ?>
 <div class="widget-box">
@@ -43,7 +43,7 @@ if(!$results){?>
         <span class="icon">
             <i class="icon-user"></i>
          </span>
-        <h5>Ingredientes</h5>
+        <h5>Productos</h5>
 
      </div>
 
@@ -55,7 +55,7 @@ if(!$results){?>
         <tr>
             <th>#</th>
             <th>Nombre</th>
-            <th>Simbolo</th>
+            <th>Precio de Venta</th>
             <!--<th>Teléfono</th>
             <th>Acción</th>-->
         </tr>
@@ -65,26 +65,26 @@ if(!$results){?>
             echo '<tr>';
             echo '<td>'.$r->idClientes.'</td>';
             echo '<td>'.$r->nomeCliente.'</td>';
-            echo '<td>'.$r->cidade.'</td>';
+            echo '<td>'.$r->numero.'</td>';
             echo '<td>';
-            
+
             /*
             if($this->permission->checkPermission($this->session->userdata('permissao'),'vCliente')){
-                echo '<a href="'.base_url().'index.php/clientes/visualizar/'.$r->idClientes.'" style="margin-right: 1%" class="btn tip-top" title="Ver mas detalles"><i class="icon-eye-open"></i></a>'; 
+                echo '<a href="'.base_url().'index.php/clientes/visualizar/'.$r->idClientes.'" style="margin-right: 1%" class="btn tip-top" title="Ver mas detalles"><i class="icon-eye-open"></i></a>';
             }*/
             if($this->permission->checkPermission($this->session->userdata('permissao'),'eCliente')){
-                echo '<a href="'.base_url().'index.php/clientes/editar/'.$r->idClientes.'" style="margin-right: 1%" class="btn btn-info tip-top" title="Editar Cliente"><i class="icon-pencil icon-white"></i></a>'; 
+                echo '<a href="'.base_url().'index.php/clientes/editar/'.$r->idClientes.'" style="margin-right: 1%" class="btn btn-info tip-top" title="Editar Cliente"><i class="icon-pencil icon-white"></i></a>';
             }
             if($this->permission->checkPermission($this->session->userdata('permissao'),'dCliente')){
-                echo '<a href="#modal-excluir" role="button" data-toggle="modal" cliente="'.$r->idClientes.'" style="margin-right: 1%" class="btn btn-danger tip-top" title="Eliminar Cliente"><i class="icon-remove icon-white"></i></a>'; 
+                echo '<a href="#modal-excluir" role="button" data-toggle="modal" cliente="'.$r->idClientes.'" style="margin-right: 1%" class="btn btn-danger tip-top" title="Eliminar Cliente"><i class="icon-remove icon-white"></i></a>';
             }
 
-              
+
             echo '</td>';
             echo '</tr>';
         }?>
         <tr>
-            
+
         </tr>
     </tbody>
 </table>
@@ -94,7 +94,7 @@ if(!$results){?>
 
 
 
- 
+
 <!-- Modal -->
 <div id="modal-excluir" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <form action="<?php echo base_url() ?>index.php/clientes/excluir" method="post" >
@@ -123,7 +123,7 @@ $(document).ready(function(){
 
 
    $(document).on('click', 'a', function(event) {
-        
+
         var cliente = $(this).attr('cliente');
         $('#idCliente').val(cliente);
 

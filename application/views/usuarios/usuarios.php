@@ -1,4 +1,4 @@
-<a href="<?php echo base_url()?>index.php/usuarios/adicionar" class="btn btn-success"><i class="icon-plus icon-white"></i> Agregar Usuario</a>
+<a href="<?php echo base_url()?>index.php/usuarios/adicionar" class="btn btn-success"><i class="icon-plus icon-white"></i> Agregar Empleado</a>
 <?php
 if(!$results){?>
         <div class="widget-box">
@@ -6,7 +6,7 @@ if(!$results){?>
         <span class="icon">
             <i class="icon-user"></i>
         </span>
-        <h5>Usuarios</h5>
+        <h5>Empleados</h5>
 
      </div>
 
@@ -18,15 +18,15 @@ if(!$results){?>
         <tr style="backgroud-color: #2D335B">
             <th>#</th>
             <th>Nombre</th>
-            <th>NIF</th>
-            <th>Teléfono</th>
-            <th>Nivel</th>
-            <th>Acción</th>
+            <th>Apellido</th>
+            <th>Número de Identificación</th>
+            <th>Número de Teléfono</th>
+            <th>Editar</th>
         </tr>
     </thead>
-    <tbody>    
+    <tbody>
         <tr>
-            <td colspan="5">Ningún Usuario Encontrado</td>
+            <td colspan="5">Ningún Empleado Encontrado</td>
         </tr>
     </tbody>
 </table>
@@ -41,7 +41,7 @@ if(!$results){?>
         <span class="icon">
             <i class="icon-user"></i>
          </span>
-        <h5>Usuarios</h5>
+        <h5>Empleados</h5>
 
      </div>
 
@@ -51,22 +51,22 @@ if(!$results){?>
 <table class="table table-bordered ">
     <thead>
         <tr style="backgroud-color: #2D335B">
-            <th>#</th>
-            <th>Nombre</th>
-            <th>NIF</th>
-            <th>Teléfono</th>
-            <th>Nivel</th>
-            <th>Acción</th>
+          <th>#</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Número de Identificación</th>
+          <th>Roll</th>
+          <th>Editar</th>
         </tr>
     </thead>
     <tbody>
         <?php foreach ($results as $r) {
-           
+
             echo '<tr>';
             echo '<td>'.$r->idUsuarios.'</td>';
             echo '<td>'.$r->nome.'</td>';
-            echo '<td>'.$r->cpf.'</td>';
-            echo '<td>'.$r->telefone.'</td>';
+            echo '<td>'.$r->rua.'</td>';
+            echo '<td>'.$r->rg.'</td>';
             echo '<td>'.$r->permissao.'</td>';
             echo '<td>
                       <a href="'.base_url().'index.php/usuarios/editar/'.$r->idUsuarios.'" class="btn btn-info tip-top" title="Editar Usuario"><i class="icon-pencil icon-white"></i></a>
@@ -74,12 +74,12 @@ if(!$results){?>
             echo '</tr>';
         }?>
         <tr>
-            
+
         </tr>
     </tbody>
 </table>
 </div>
 </div>
 
-	
+
 <?php echo $this->pagination->create_links();}?>

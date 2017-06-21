@@ -5,7 +5,7 @@
                 <span class="icon">
                     <i class="icon-user"></i>
                 </span>
-                <h5>Registro de Ingredientes</h5>
+                <h5>Registro de Productos</h5>
             </div>
             <div class="widget-content nopadding">
                 <?php if ($custom_error != '') {
@@ -52,28 +52,28 @@
                             <input id="rua" type="text" name="rua" value="<?php echo set_value('rua'); ?>"  />
                         </div>
                     </div>
-
+-->
                     <div class="control-group">
-                        <label for="numero" class="control-label">Número<span class="required">*</span></label>
+                        <label for="numero" class="control-label">Precio de Venta<span class="required">*</span></label>
                         <div class="controls">
                             <input id="numero" type="text" name="numero" value="<?php echo set_value('numero'); ?>"  />
                         </div>
                     </div>
-
+<!--
                     <div class="control-group" class="control-label">
                         <label for="bairro" class="control-label">Barrio<span class="required">*</span></label>
                         <div class="controls">
                             <input id="bairro" type="text" name="bairro" value="<?php echo set_value('bairro'); ?>"  />
                         </div>
                     </div>
-                    -->
+
                     <div class="control-group" class="control-label">
-                        <label for="cidade" class="control-label">Simbolo<span class="required">*</span></label>
+                        <label for="cidade" class="control-label">Precio de Venta<span class="required">*</span></label>
                         <div class="controls">
-                            <input id="cidade" type="text" name="cidade" value="<?php echo set_value('cidade'); ?>"  />
+                            <input id="cidade" type="text" class="money" name="cidade" value="<?php echo set_value('cidade'); ?>"  />
                         </div>
                     </div>
-                    <!--
+                    
                     <div class="control-group" class="control-label">
                         <label for="estado" class="control-label">País<span class="required">*</span></label>
                         <div class="controls">
