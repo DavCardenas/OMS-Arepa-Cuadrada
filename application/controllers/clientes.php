@@ -69,8 +69,10 @@ class Clientes extends CI_Controller {
         $this->load->library('form_validation');
         $this->data['custom_error'] = '';
 
-        if ($this->form_validation->run('clientes') == false) {
+       if ($this->form_validation->run('clientes') == false) {
+            
             $this->data['custom_error'] = (validation_errors() ? '<div class="form_error">' . validation_errors() . '</div>' : false);
+            
         } else {
             $data = array(
                 'nomeCliente' => set_value('nomeCliente'),

@@ -1,5 +1,5 @@
 <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'aCliente')){ ?>
-    <a href="<?php echo base_url();?>index.php/clientes/adicionar" class="btn btn-success"><i class="icon-plus icon-white"></i> Agregar Cliente</a>    
+    <a href="<?php echo base_url();?>index.php/clientes/adicionar" class="btn btn-success"><i class="icon-plus icon-white"></i> Agregar Ingrediente</a>    
 <?php } ?>
 
 <?php
@@ -10,7 +10,7 @@ if(!$results){?>
             <span class="icon">
                 <i class="icon-user"></i>
             </span>
-            <h5>Clientes</h5>
+            <h5>Ingredientes</h5>
 
         </div>
 
@@ -20,14 +20,14 @@ if(!$results){?>
                     <tr>
                         <th>#</th>
                         <th>Nombre</th>
-                        <th>DNI/NIE/NIF</th>
-                        <th>Teléfono</th>
-                        <th>Acción</th>
+                        <th>Simbolo</th>
+                        <!--<th>Teléfono</th>
+                        <th>Acción</th>-->
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td colspan="5">Ningún Cliente Registrado</td>
+                        <td colspan="5">Ningún Ingrediente Registrado</td>
                     </tr>
                 </tbody>
             </table>
@@ -43,7 +43,7 @@ if(!$results){?>
         <span class="icon">
             <i class="icon-user"></i>
          </span>
-        <h5>Clientes</h5>
+        <h5>Ingredientes</h5>
 
      </div>
 
@@ -55,9 +55,9 @@ if(!$results){?>
         <tr>
             <th>#</th>
             <th>Nombre</th>
-            <th>DNI/NIE/NIF</th>
-            <th>Teléfono</th>
-            <th>Acción</th>
+            <th>Simbolo</th>
+            <!--<th>Teléfono</th>
+            <th>Acción</th>-->
         </tr>
     </thead>
     <tbody>
@@ -65,12 +65,13 @@ if(!$results){?>
             echo '<tr>';
             echo '<td>'.$r->idClientes.'</td>';
             echo '<td>'.$r->nomeCliente.'</td>';
-            echo '<td>'.$r->documento.'</td>';
-            echo '<td>'.$r->telefone.'</td>';
+            echo '<td>'.$r->cidade.'</td>';
             echo '<td>';
+            
+            /*
             if($this->permission->checkPermission($this->session->userdata('permissao'),'vCliente')){
                 echo '<a href="'.base_url().'index.php/clientes/visualizar/'.$r->idClientes.'" style="margin-right: 1%" class="btn tip-top" title="Ver mas detalles"><i class="icon-eye-open"></i></a>'; 
-            }
+            }*/
             if($this->permission->checkPermission($this->session->userdata('permissao'),'eCliente')){
                 echo '<a href="'.base_url().'index.php/clientes/editar/'.$r->idClientes.'" style="margin-right: 1%" class="btn btn-info tip-top" title="Editar Cliente"><i class="icon-pencil icon-white"></i></a>'; 
             }

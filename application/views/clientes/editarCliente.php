@@ -11,6 +11,7 @@
                 <?php if ($custom_error != '') {
                     echo '<div class="alert alert-danger">' . $custom_error . '</div>';
                 } ?>
+
                 <form action="<?php echo current_url(); ?>" id="formCliente" method="post" class="form-horizontal" >
                     <div class="control-group">
                         <?php echo form_hidden('idClientes',$result->idClientes) ?>
@@ -19,6 +20,7 @@
                             <input id="nomeCliente" type="text" name="nomeCliente" value="<?php echo $result->nomeCliente; ?>"  />
                         </div>
                     </div>
+                    <!--
                     <div class="control-group">
                         <label for="documento" class="control-label">DNI/NIE/NIF<span class="required">*</span></label>
                         <div class="controls">
@@ -66,21 +68,21 @@
                             <input id="bairro" type="text" name="bairro" value="<?php echo $result->bairro; ?>"  />
                         </div>
                     </div>
-
+                    -->
                     <div class="control-group" class="control-label">
                         <label for="cidade" class="control-label">Ciudad<span class="required">*</span></label>
                         <div class="controls">
                             <input id="cidade" type="text" name="cidade" value="<?php echo $result->cidade; ?>"  />
                         </div>
                     </div>
-
+                    <!--
                     <div class="control-group" class="control-label">
                         <label for="estado" class="control-label">País<span class="required">*</span></label>
                         <div class="controls">
                             <input id="estado" type="text" name="estado" value="<?php echo $result->estado; ?>"  />
                         </div>
                     </div>
-
+                    
                     <div class="control-group" class="control-label">
                         <label for="cep" class="control-label">CP<span class="required">*</span></label>
                         <div class="controls">
@@ -88,7 +90,7 @@
                         </div>
                     </div>
 
-
+                    -->
 
                     <div class="form-actions">
                         <div class="span12">

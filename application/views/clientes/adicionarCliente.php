@@ -5,7 +5,7 @@
                 <span class="icon">
                     <i class="icon-user"></i>
                 </span>
-                <h5>Registro de Cliente</h5>
+                <h5>Registro de Ingredientes</h5>
             </div>
             <div class="widget-content nopadding">
                 <?php if ($custom_error != '') {
@@ -18,6 +18,7 @@
                             <input id="nomeCliente" type="text" name="nomeCliente" value="<?php echo set_value('nomeCliente'); ?>"  />
                         </div>
                     </div>
+                    <!--
                     <div class="control-group">
                         <label for="documento" class="control-label">DNI/NIE/NIF<span class="required">*</span></label>
                         <div class="controls">
@@ -65,14 +66,14 @@
                             <input id="bairro" type="text" name="bairro" value="<?php echo set_value('bairro'); ?>"  />
                         </div>
                     </div>
-
+                    -->
                     <div class="control-group" class="control-label">
-                        <label for="cidade" class="control-label">Ciudad<span class="required">*</span></label>
+                        <label for="cidade" class="control-label">Simbolo<span class="required">*</span></label>
                         <div class="controls">
                             <input id="cidade" type="text" name="cidade" value="<?php echo set_value('cidade'); ?>"  />
                         </div>
                     </div>
-
+                    <!--
                     <div class="control-group" class="control-label">
                         <label for="estado" class="control-label">País<span class="required">*</span></label>
                         <div class="controls">
@@ -87,7 +88,7 @@
                         </div>
                     </div>
 
-
+                    -->
 
                     <div class="form-actions">
                         <div class="span12">
@@ -110,15 +111,15 @@
            $('#formCliente').validate({
             rules :{
                   nomeCliente:{ required: true},
-                  documento:{ required: true},
-                  telefone:{ required: true},
-                  email:{ required: true},
-                  rua:{ required: true},
-                  numero:{ required: true},
-                  bairro:{ required: true},
+                  documento:{ required: false},
+                  telefone:{ required: false},
+                  email:{ required: false},
+                  rua:{ required: false},
+                  numero:{ required: false},
+                  bairro:{ required: false},
                   cidade:{ required: true},
-                  estado:{ required: true},
-                  cep:{ required: true}
+                  estado:{ required: false},
+                  cep:{ required: false}
             },
             messages:{
                   nomeCliente :{ required: 'Campo Requerido.'},

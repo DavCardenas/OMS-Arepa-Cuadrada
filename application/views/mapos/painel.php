@@ -7,17 +7,15 @@
 <script type="text/javascript" src="<?php echo base_url();?>js/dist/plugins/jqplot.donutRenderer.min.js"></script>
 
 <!--Action boxes-->
+
   <div class="container-fluid">
     <div class="quick-actions_homepage">
       <ul class="quick-actions">
         <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'vCliente')){ ?>
-            <li class="bg_lb"> <a href="<?php echo base_url()?>index.php/clientes"> <i class="icon-group"></i> Clientes</a> </li>
+            <li class="bg_lb"> <a href="<?php echo base_url()?>index.php/clientes"> <i class="icon-group"></i> Ingredientes</a> </li>
         <?php } ?>
         <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'vProduto')){ ?>
             <li class="bg_lg"> <a href="<?php echo base_url()?>index.php/produtos"> <i class="icon-barcode"></i> Productos</a> </li>
-        <?php } ?>
-        <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'vServico')){ ?>
-            <li class="bg_ly"> <a href="<?php echo base_url()?>index.php/servicos"> <i class="icon-wrench"></i> Servicios</a> </li>
         <?php } ?>
         <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'vOs')){ ?>
             <li class="bg_lo"> <a href="<?php echo base_url()?>index.php/os"> <i class="icon-tags"></i> O.S</a> </li>
@@ -34,7 +32,8 @@
 
       </ul>
     </div>
-  </div>  
+  </div> 
+
 <!--End-Action boxes-->  
 
 
