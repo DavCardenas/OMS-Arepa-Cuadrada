@@ -12,12 +12,12 @@
                 <form action="<?php echo current_url(); ?>" id="formProduto" method="post" class="form-horizontal" >
                      <div class="control-group">
                         <?php echo form_hidden('idProdutos',$result->idProdutos) ?>
-                        <label for="descricao" class="control-label">Descripción<span class="required">*</span></label>
+                        <label for="descricao" class="control-label">Nombre<span class="required">*</span></label>
                         <div class="controls">
                             <input id="descricao" type="text" name="descricao" value="<?php echo $result->descricao; ?>"  />
                         </div>
                     </div>
-
+                    <!--
                     <div class="control-group">
                         <label for="unidade" class="control-label">Unidad<span class="required">*</span></label>
                         <div class="controls">
@@ -31,14 +31,14 @@
                             <input id="precoCompra" class="money" type="text" name="precoCompra" value="<?php echo $result->precoCompra; ?>"  />
                         </div>
                     </div>
-
+                    -->
                     <div class="control-group">
                         <label for="precoVenda" class="control-label">Precio de Venta<span class="required">*</span></label>
                         <div class="controls">
                             <input id="precoVenda" class="money" type="text" name="precoVenda" value="<?php echo $result->precoVenda; ?>"  />
                         </div>
                     </div>
-
+                    <!--
                     <div class="control-group">
                         <label for="estoque" class="control-label">Stock<span class="required">*</span></label>
                         <div class="controls">
@@ -52,7 +52,7 @@
                             <input id="estoqueMinimo" type="text" name="estoqueMinimo" value="<?php echo $result->estoqueMinimo; ?>"  />
                         </div>
                     </div>
-
+                    -->
                     <div class="form-actions">
                         <div class="span12">
                             <div class="span6 offset3">

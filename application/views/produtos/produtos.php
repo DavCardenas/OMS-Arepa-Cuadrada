@@ -22,9 +22,9 @@ if(!$results){?>
         <tr>
             <th>#</th>
             <th>Nombre</th>
-            <th>Stock</th>
             <th>Precio</th>
-            <th>Acción</th>
+            <!--<th>Stock</th>
+            <th>Acción</th>-->
         </tr>
     </thead>
     <tbody>
@@ -54,11 +54,11 @@ if(!$results){?>
 <table class="table table-bordered ">
     <thead>
         <tr style="backgroud-color: #2D335B">
-            <th>#</th>
+             <th>#</th>
             <th>Nombre</th>
-            <th>Stock</th>
             <th>Precio</th>
-            <th>Acción</th>
+            <!--<th>Stock</th>
+            <th>Acción</th>-->
         </tr>
     </thead>
     <tbody>
@@ -66,13 +66,14 @@ if(!$results){?>
             echo '<tr>';
             echo '<td>'.$r->idProdutos.'</td>';
             echo '<td>'.$r->descricao.'</td>';
-            echo '<td>'.$r->estoque.'</td>';
+            /*echo '<td>'.$r->precoVenda.'</td>';*/
             echo '<td>'.number_format($r->precoVenda,2,',','.').'</td>';
             
             echo '<td>';
+            /*
             if($this->permission->checkPermission($this->session->userdata('permissao'),'vProduto')){
                 echo '<a style="margin-right: 1%" href="'.base_url().'index.php/produtos/visualizar/'.$r->idProdutos.'" class="btn tip-top" title="Visualizar Producto"><i class="icon-eye-open"></i></a>  '; 
-            }
+            }*/
             if($this->permission->checkPermission($this->session->userdata('permissao'),'eProduto')){
                 echo '<a style="margin-right: 1%" href="'.base_url().'index.php/produtos/editar/'.$r->idProdutos.'" class="btn btn-info tip-top" title="Editar Producto"><i class="icon-pencil icon-white"></i></a>'; 
             }

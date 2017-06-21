@@ -33,29 +33,9 @@ $config = array('clientes' => array(array(
                                     'rules'=>'required|trim|xss_clean'
                                 ),
                                 array(
-                                    'field'=>'unidade',
-                                    'label'=>'Unidade',
-                                    'rules'=>'required|trim|xss_clean'
-                                ),
-                                array(
-                                    'field'=>'precoCompra',
-                                    'label'=>'Preo de Compra',
-                                    'rules'=>'required|trim|xss_clean'
-                                ),
-                                array(
                                     'field'=>'precoVenda',
                                     'label'=>'Preo de Venda',
                                     'rules'=>'required|trim|xss_clean'
-                                ),
-                                array(
-                                    'field'=>'estoque',
-                                    'label'=>'Estoque',
-                                    'rules'=>'required|trim|xss_clean'
-                                ),
-                                array(
-                                    'field'=>'estoqueMinimo',
-                                    'label'=>'Estoque Mnimo',
-                                    'rules'=>'trim|xss_clean'
                                 ))
                 ,
                 'usuarios' => array(array(
