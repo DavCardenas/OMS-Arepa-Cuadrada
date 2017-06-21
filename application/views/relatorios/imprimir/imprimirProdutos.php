@@ -21,7 +21,7 @@
 
                   <div class="widget-box">
                       <div class="widget-title">
-                          <h4 style="text-align: center">Productos</h4>
+                          <h4 style="text-align: center">Ingredientes</h4>
                       </div>
                       <div class="widget-content nopadding">
 
@@ -29,10 +29,10 @@
                       <thead>
                           <tr>
                               <th style="font-size: 1.2em; padding: 5px;">Nombre</th>
-                              <th style="font-size: 1.2em; padding: 5px;">Unidad</th>
-                              <th style="font-size: 1.2em; padding: 5px;">Precio Compra</th>
+                              <th style="font-size: 1.2em; padding: 5px;">Simbolo</th>
+                              <!-- <th style="font-size: 1.2em; padding: 5px;">Precio Compra</th>
                               <th style="font-size: 1.2em; padding: 5px;">Precio Venta</th>
-                              <th style="font-size: 1.2em; padding: 5px;">Stock</th>
+                              <th style="font-size: 1.2em; padding: 5px;">Stock</th> -->
                           </tr>
                       </thead>
                       <tbody>
@@ -41,10 +41,10 @@
                               echo '<tr>';
                               echo '<td>' . $p->descricao. '</td>';
                               echo '<td>' . $p->unidade . '</td>';
-                              echo '<td>' . $p->precoCompra . '</td>';
+                            /*  echo '<td>' . $p->precoCompra . '</td>';
                               echo '<td>' . $p->precoVenda . '</td>';
                               echo '<td>' . $p->estoque. '</td>';
-                              echo '</tr>';
+                              echo '</tr>';*/
                           }
                           ?>
                       </tbody>
@@ -77,4 +77,3 @@
             <script src="<?php echo base_url();?>js/dashboard.js"></script>
   </body>
 </html>
-

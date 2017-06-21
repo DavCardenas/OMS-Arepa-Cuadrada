@@ -10,7 +10,7 @@
             <div class="widget-content">
                 <ul class="site-stats">
                     <li><a href="<?php echo base_url()?>index.php/relatorios/osRapid"><i class="icon-tags"></i> <small>Todas las O.S</small></a></li>
-                    
+
                 </ul>
             </div>
         </div>
@@ -38,6 +38,7 @@
                                 <input type="date"  name="dataFinal" class="span12" />
                             </div>
                         </div>
+                        <!--
                         <div class="span12 well" style="margin-left: 0">
                             <div class="span6">
                                 <label for="">Cliente:</label>
@@ -51,6 +52,7 @@
                                 <input type="hidden" name="responsavel" id="responsavelHide" />
                             </div>
                         </div>
+                      -->
                         <div class="span12 well" style="margin-left: 0">
                             <div class="span6">
                                 <label for="">Estado:</label>
@@ -85,7 +87,7 @@
 <script type="text/javascript">
     $(document).ready(function(){
         $(".money").maskMoney();
-        
+
         $("#cliente").autocomplete({
             source: "<?php echo base_url(); ?>index.php/os/autoCompleteCliente",
             minLength: 2,

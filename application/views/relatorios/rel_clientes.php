@@ -9,7 +9,7 @@
             </div>
             <div class="widget-content">
                 <ul class="site-stats">
-                    <li><a href="<?php echo base_url()?>index.php/relatorios/clientesRapid"><i class="icon-user"></i> <small>Todos los Clientes</small></a></li>
+                    <li><a href="<?php echo base_url()?>index.php/relatorios/clientesRapid"><i class="icon-barcode"></i> <small>Todos los Productos</small></a></li>
                 </ul>
             </div>
         </div>

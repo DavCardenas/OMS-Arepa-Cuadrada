@@ -9,19 +9,19 @@
     <link rel="stylesheet" href="<?php echo base_url();?>css/blue.css" class="skin-color" />
     <script type="text/javascript"  src="<?php echo base_url();?>js/jquery-1.10.2.min.js"></script>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
- 
+
   <body style="background-color: transparent">
 
 
 
       <div class="container-fluid">
-    
+
           <div class="row-fluid">
               <div class="span12">
 
                   <div class="widget-box">
                       <div class="widget-title">
-                          <h4 style="text-align: center">Clientes</h4>
+                          <h4 style="text-align: center">Productos</h4>
                       </div>
                       <div class="widget-content nopadding">
 
@@ -29,10 +29,10 @@
                       <thead>
                           <tr>
                               <th style="font-size: 1.2em; padding: 5px;">Nombre</th>
-                              <th style="font-size: 1.2em; padding: 5px;">DNI/NIE/NIF</th>
-                              <th style="font-size: 1.2em; padding: 5px;">Teléfono</th>
+                              <th style="font-size: 1.2em; padding: 5px;">Valor de Venta</th>
+                            <!--  <th style="font-size: 1.2em; padding: 5px;">Teléfono</th>
                               <th style="font-size: 1.2em; padding: 5px;">Email</th>
-                              <th style="font-size: 1.2em; padding: 5px;">Registrado</th>
+                              <th style="font-size: 1.2em; padding: 5px;">Registrado</th>-->
                           </tr>
                       </thead>
                       <tbody>
@@ -41,23 +41,23 @@
                               $dataCadastro = date('d/m/Y', strtotime($c->dataCadastro));
                               echo '<tr>';
                               echo '<td>' . $c->nomeCliente . '</td>';
-                              echo '<td>' . $c->documento . '</td>';
-                              echo '<td>' . $c->telefone . '</td>';
+                              echo '<td>' . $c->numero . '</td>';
+                            /*  echo '<td>' . $c->telefone . '</td>';
                               echo '<td>' . $c->email . '</td>';
                               echo '<td>' . $dataCadastro . '</td>';
-                              echo '</tr>';
+                              echo '</tr>';*/
                           }
                           ?>
                       </tbody>
                   </table>
-                  
+
                   </div>
-                   
+
               </div>
                   <h5 style="text-align: right">Fecha del informe: <?php echo date('d/m/Y');?></h5>
 
           </div>
-     
+
 
 
       </div>
@@ -78,10 +78,3 @@
             <script src="<?php echo base_url();?>js/dashboard.js"></script>
   </body>
 </html>
-
-
-
-
-
-
-

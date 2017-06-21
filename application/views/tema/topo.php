@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>RMA O.S</title>
+<title>OMS Arepa-Cuadrada</title>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap.min.css" />
@@ -92,24 +92,27 @@
           <ul>
 
             <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'rCliente')){ ?>
-                <li><a href="<?php echo base_url()?>index.php/relatorios/clientes">Clientes</a></li>
+                <li><a href="<?php echo base_url()?>index.php/relatorios/clientes">Productos</a></li>
             <?php } ?>
             <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'rProduto')){ ?>
-                <li><a href="<?php echo base_url()?>index.php/relatorios/produtos">Productos</a></li>
+                <li><a href="<?php echo base_url()?>index.php/relatorios/produtos">Ingredientes</a></li>
             <?php } ?>
+            <!--
             <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'rServico')){ ?>
                 <li><a href="<?php echo base_url()?>index.php/relatorios/servicos">Servicios</a></li>
             <?php } ?>
+          -->
             <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'rOs')){ ?>
                  <li><a href="<?php echo base_url()?>index.php/relatorios/os">Ordenes de Servicio</a></li>
             <?php } ?>
+            <!--
             <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'rVenda')){ ?>
                 <li><a href="<?php echo base_url()?>index.php/relatorios/vendas">Ventas</a></li>
             <?php } ?>
             <?php if($this->permission->checkPermission($this->session->userdata('permissao'),'rFinanceiro')){ ?>
                 <li><a href="<?php echo base_url()?>index.php/relatorios/financeiro">Financieros</a></li>
             <?php } ?>
-
+          -->
           </ul>
         </li>
 
@@ -141,7 +144,7 @@
 </div>
 <div id="content">
   <div id="content-header">
-    <div id="breadcrumb"> <a href="<?php echo base_url()?>" title="Dashboard" class="tip-bottom"><i class="icon-home"></i> Dashboard</a> <?php if($this->uri->segment(1) != null){?><a href="<?php echo base_url().'index.php/'.$this->uri->segment(1)?>" class="tip-bottom" title="<?php echo ucfirst($this->uri->segment(1));?>"><?php echo ucfirst($this->uri->segment(1));?></a> <?php if($this->uri->segment(2) != null){?><a href="<?php echo base_url().'index.php/'.$this->uri->segment(1).'/'.$this->uri->segment(2) ?>" class="current tip-bottom" title="<?php echo ucfirst($this->uri->segment(2)); ?>"><?php echo ucfirst($this->uri->segment(2));} ?></a> <?php }?></div>
+    <div id="breadcrumb"> <a href="<?php echo base_url()?>" title="Dashboard" class="tip-bottom"><i class="icon-home"></i> Inicio</a> </div>
   </div>
   <div class="container-fluid">
     <div class="row-fluid">
@@ -169,7 +172,7 @@
 </div>
 <!--Footer-part-->
 <div class="row-fluid">
-  <div id="footer" class="span12"> 2015 &copy; RMA O.S</div>
+  <div id="footer" class="span12"> 2017 &copy; OMS - La Arepa Cuadrada</div>
 </div>
 <!--end-Footer-part-->
 

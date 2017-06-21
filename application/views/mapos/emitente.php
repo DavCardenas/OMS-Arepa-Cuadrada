@@ -13,21 +13,21 @@
                 <div class="alert alert-danger">Ningún datos se ha registrado hasta la fecha. Esta información estará disponible en la pantalla de impresión de la Orden de Servicio.</div>
                 <a href="#modalCadastrar" data-toggle="modal" role="button" class="btn btn-success">Registrar Datos</a>
             </div>
-        </div>    
-        
+        </div>
+
     </div>
-</div>   
+</div>
 
 
 <div id="modalCadastrar" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <form action="<?php echo base_url(); ?>index.php/mapos/cadastrarEmitente" id="formCadastrar" enctype="multipart/form-data" method="post" class="form-horizontal" >
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h3 id="myModalLabel">RMA O.S - Registrar Datos de la Empresa</h3>
+    <h3 id="myModalLabel">OMS Arepa Cuadrada - Registrar Datos de la Empresa</h3>
   </div>
   <div class="modal-body">
-        
-        
+
+
                     <div class="control-group">
                         <label for="nome" class="control-label">Razón Social<span class="required">*</span></label>
                         <div class="controls">
@@ -95,7 +95,7 @@
                             <input type="file" name="userfile" value="" />
                         </div>
                     </div>
-               
+
 
   </div>
   <div class="modal-footer">
@@ -144,8 +144,8 @@
     <h3 id="">RMA O.S - Editar Datos de la Empresa</h3>
   </div>
   <div class="modal-body">
-        
-        
+
+
                     <div class="control-group">
                         <label for="nome" class="control-label">Razon Social<span class="required">*</span></label>
                         <div class="controls">
@@ -208,8 +208,8 @@
                         </div>
                     </div>
 
-    
-               
+
+
 
   </div>
   <div class="modal-footer">
@@ -227,7 +227,7 @@
     <h3 id="">RMA O.S - Modificar Dirección</h3>
   </div>
   <div class="modal-body">
-         <div class="span12 alert alert-info">Selecione uma nueva imagem de logomarca. Tamaño indicado (130 X 130).</div>          
+         <div class="span12 alert alert-info">Selecione uma nueva imagem de logomarca. Tamaño indicado (130 X 130).</div>
          <div class="control-group">
             <label for="logo" class="control-label"><span class="required">Logomarca*</span></label>
             <div class="controls">
@@ -251,7 +251,7 @@
 
 <script type="text/javascript" src="<?php echo base_url()?>js/jquery.validate.js"></script>
 <script type="text/javascript">
-    
+
 $(document).ready(function(){
 
     $("#formLogo").validate({
@@ -357,5 +357,5 @@ $(document).ready(function(){
    });
 
 });
-    
+
 </script>
